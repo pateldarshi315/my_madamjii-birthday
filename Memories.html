@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Our Memories 💗</title>
+
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    min-height:100vh;
+
+    font-family:Arial,sans-serif;
+
+    color:#593342;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #ffd6e5,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            #ffe6ef,
+            transparent 35%
+        ),
+        #fff7fa;
+
+    overflow-x:hidden;
+
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:28px;
+
+    padding:18px;
+
+    background:
+        rgba(255,255,255,0.88);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:
+        1px solid #f2d2de;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#a84f70;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#d8587f;
+
+    transform:translateY(-2px);
+
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.container{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:
+        75px 20px;
+
+    text-align:center;
+
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.small-title{
+
+    color:#b85c78;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+    margin-bottom:15px;
+
+    animation:
+        fadeDown 1s ease;
+
+}
+
+
+h1{
+
+    font-family:cursive;
+
+    color:#d8587f;
+
+    font-size:
+        clamp(45px,8vw,70px);
+
+    font-weight:normal;
+
+    margin-bottom:15px;
+
+    animation:
+        fadeDown 1.2s ease;
+
+}
+
+
+.description{
+
+    max-width:650px;
+
+    margin:
+        0 auto 50px;
+
+    color:#80616e;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    animation:
+        fadeDown 1.4s ease;
+
+}
+
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(-25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+
+/* =========================
+   PHOTO CARD
+========================= */
+
+.photo-card{
+
+    background:
+        rgba(255,255,255,0.92);
+
+    padding:12px;
+
+    border-radius:22px;
+
+    border:
+        1px solid #f3d8e2;
+
+    box-shadow:
+        0 12px 35px
+        rgba(120,50,80,0.10);
+
+    opacity:0;
+
+    animation:
+        photoAppear .8s ease forwards;
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+/* Different animation delay */
+
+.photo-card:nth-child(1){
+    animation-delay:.2s;
+}
+
+.photo-card:nth-child(2){
+    animation-delay:.4s;
+}
+
+.photo-card:nth-child(3){
+    animation-delay:.6s;
+}
+
+.photo-card:nth-child(4){
+    animation-delay:.8s;
+}
+
+.photo-card:nth-child(5){
+    animation-delay:1s;
+}
+
+.photo-card:nth-child(6){
+    animation-delay:1.2s;
+}
+
+.photo-card:nth-child(7){
+    animation-delay:1.4s;
+}
+
+.photo-card:nth-child(8){
+    animation-delay:1.6s;
+}
+
+.photo-card:nth-child(9){
+    animation-delay:1.8s;
+}
+
+.photo-card:nth-child(10){
+    animation-delay:2s;
+}
+
+
+@keyframes photoAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(35px)
+            scale(.94);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* HOVER */
+
+.photo-card:hover{
+
+    transform:
+        translateY(-10px)
+        rotate(1deg);
+
+    box-shadow:
+        0 20px 45px
+        rgba(120,50,80,0.18);
+
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.photo-card img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:contain;
+
+    display:block;
+
+    border-radius:16px;
+
+    background:#fff5f8;
+
+    transition:
+        transform .5s ease;
+
+}
+
+
+/* Image zoom */
+
+.photo-card:hover img{
+
+    transform:
+        scale(1.03);
+
+}
+
+
+/* =========================
+   CAPTION
+========================= */
+
+.photo-card p{
+
+    padding:
+        14px 5px 8px;
+
+    color:#a84f70;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+}
+
+
+/* =========================
+   NEXT BUTTON
+========================= */
+
+.button{
+
+    display:inline-block;
+
+    margin-top:50px;
+
+    padding:
+        15px 30px;
+
+    background:#d8587f;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:bold;
+
+    box-shadow:
+        0 10px 25px
+        rgba(216,88,127,0.3);
+
+    transition:.3s;
+
+}
+
+
+.button:hover{
+
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    background:#c94d73;
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-30px;
+
+    z-index:2000;
+
+    pointer-events:none;
+
+    animation:
+        floatHeart 6s linear forwards;
+
+}
+
+
+@keyframes floatHeart{
+
+    0%{
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    nav{
+
+        gap:10px;
+
+        padding:
+            14px 5px;
+
+    }
+
+    nav a{
+
+        font-size:10px;
+
+    }
+
+
+    .container{
+
+        padding:
+            65px 15px;
+
+    }
+
+
+    .gallery{
+
+        grid-template-columns:1fr;
+
+        gap:22px;
+
+    }
+
+
+    .photo-card img{
+
+        height:330px;
+
+    }
+
+}
+
+
+/* Small phone */
+
+@media(max-width:420px){
+
+    .photo-card img{
+
+        height:280px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+<a href="index.html">
+Home
+</a>
+
+<a href="memories.html">
+Memories
+</a>
+
+<a href="letter.html">
+Letter
+</a>
+
+<a href="reasons.html">
+Reasons
+</a>
+
+<a href="surprise.html">
+Surprise
+</a>
+
+</nav>
+
+
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<div class="container">
+
+
+<p class="small-title">
+
+OUR LITTLE WORLD 📸
+
+</p>
+
+
+<h1>
+
+Our Memories 💕
+
+</h1>
+
+
+<p class="description">
+
+Every picture has a story...
+
+and every story is better
+because you're in it. 🥹💗
+
+</p>
+
+
+
+<!-- =========================
+     PHOTO GALLERY
+========================= -->
+
+<div class="gallery">
+
+
+<!-- PHOTO 1 -->
+
+<div class="photo-card">
+
+<img
+src="./Photo%201.jpeg"
+alt="Memory 1">
+
+<p>
+Us being us 💕
+</p>
+
+</div>
+
+
+
+<!-- PHOTO 2 -->
+
+<div class="photo-card">
+
+<img
+src="./Photo%206.jpeg"
+alt="Memory 2">
+
+<p>
+The moment we enjoyed 🥹💗
+</p>
+
+</div>
+
+
+
+<!-- PHOTO 3 -->
+
+<div class="photo-card">
+
+<img
+src="./Photo%203.jpeg"
+alt="Memory 3">
+
+<p>
+Always you & me ♾️💗
+</p>
+
+</div>
+
+
+
+<!-- PHOTO 4 -->
+
+<div class="photo-card">
+
+<img
+src="./Photo%209.jpeg"
+alt="Memory 4">
+
+<p>
+Little moments, big smiles 🫶
+</p>
+
+</div>
+
+
+
+<!-- PHOTO 5 -->
+
+<div class="photo-card">
+
+<img
+src="./Photo%205.jpeg"
+alt="Memory 5">
+
+<p>
+Crazy us 😂💕
+</p>
+
+</div>
+
+
+
+<!-- PHOTO 6 -->
+
+<div class="photo-card">
+
+<img
+src="./Photo%202.jpeg"
+alt="Memory 6">
+
+<p>
+Lovely moments ✨🌸
+</p>
+
+</div>
+
+
+
+<!-- PHOTO 7 -->
+
+<div class="photo-card">
+
+<img
+src="./Photo%207.jpeg"
+alt="Memory 7">
+
+<p>
+Forever together 🫶💗
+</p>
+
+</div>
+
+
+
+<!-- PHOTO 8 -->
+
+<div class="photo-card">
+
+<img
+src="./Photo%208.jpeg"
+alt="Memory 8">
+
+<p>
+Beautiful Warmhug 🫶
+</p>
+
+</div>
+
+
+
+<!-- PHOTO 9 -->
+
+<div class="photo-card">
+
+<img
+src="./Photo%204.jpeg"
+alt="Memory 9">
+
+<p>
+Mine Girl 💕🫶
+</p>
+
+</div>
+
+
+
+<!-- PHOTO 10 -->
+
+<div class="photo-card">
+
+<img
+src="./Photo%2010.jpeg"
+alt="Memory 10">
+
+<p>
+That smile 🥹💗
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<!-- NEXT BUTTON -->
+
+<a
+href="letter.html"
+class="button">
+
+Next → My Letter 💌
+
+</a>
+
+
+</div>
+
+
+
+<!-- =========================
+     HEART ANIMATION
+========================= -->
+
+<script>
+
+function createHeart(){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className="heart";
+
+
+    const emojis=[
+
+        "💗",
+        "💕",
+        "💖",
+        "🌸",
+        "✨",
+        "🎀"
+
+    ];
+
+
+    heart.innerHTML=
+        emojis[
+            Math.floor(
+                Math.random()*emojis.length
+            )
+        ];
+
+
+    heart.style.left=
+        Math.random()*100+"vw";
+
+
+    heart.style.fontSize=
+        (14+Math.random()*20)+"px";
+
+
+    heart.style.animationDuration=
+        (5+Math.random()*4)+"s";
+
+
+    document.body.appendChild(heart);
+
+
+    setTimeout(
+        ()=>{
+            heart.remove();
+        },
+        9000
+    );
+
+}
+
+
+setInterval(
+    createHeart,
+    800
+);
+
+</script>
+
+
+</body>
+
+</html>

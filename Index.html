@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Madamjii 💗</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #593342;
+
+    background:
+        radial-gradient(circle at 20% 20%, #ffd6e5, transparent 35%),
+        radial-gradient(circle at 80% 80%, #ffe6ef, transparent 35%),
+        #fff7fa;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   PASSWORD SCREEN
+========================= */
+
+#passwordScreen {
+
+    position: fixed;
+    inset: 0;
+    z-index: 5000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe1ec,
+            #fff7fa,
+            #ffdce9
+        );
+}
+
+
+.password-box {
+
+    width: 100%;
+    max-width: 450px;
+
+    padding: 45px 30px;
+
+    background: rgba(255,255,255,0.94);
+
+    border-radius: 30px;
+
+    border: 1px solid #f3d4df;
+
+    box-shadow:
+        0 20px 60px rgba(120,50,80,0.15);
+
+    animation: appear 1s ease;
+}
+
+
+.lock {
+
+    font-size: 65px;
+    margin-bottom: 15px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+
+.password-box h1 {
+
+    font-family: cursive;
+
+    color: #d8587f;
+
+    font-size: 45px;
+
+    font-weight: normal;
+}
+
+
+.password-box p {
+
+    color: #80616e;
+
+    line-height: 1.6;
+
+    margin: 15px 0 25px;
+}
+
+
+.password-input {
+
+    width: 100%;
+
+    padding: 14px 18px;
+
+    border-radius: 50px;
+
+    border: 1px solid #efcbd8;
+
+    outline: none;
+
+    text-align: center;
+
+    font-size: 16px;
+}
+
+
+.password-input:focus {
+
+    border-color: #d8587f;
+
+    box-shadow:
+        0 0 0 3px #d8587f20;
+}
+
+
+.enter-button {
+
+    border: none;
+
+    cursor: pointer;
+
+    margin-top: 15px;
+
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    background: #d8587f;
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 10px 25px rgba(216,88,127,.3);
+
+    transition: .3s;
+}
+
+
+.enter-button:hover {
+
+    transform: translateY(-3px);
+
+    background: #c94d73;
+}
+
+
+.error {
+
+    color: #d8587f !important;
+
+    font-size: 14px;
+
+    display: none;
+}
+
+
+/* =========================
+   MAIN WEBSITE
+========================= */
+
+#mainWebsite {
+
+    display: none;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 28px;
+
+    padding: 18px;
+
+    background:
+        rgba(255,255,255,0.82);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom:
+        1px solid #f2d2de;
+}
+
+
+nav a {
+
+    text-decoration: none;
+
+    color: #a84f70;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    transition: .3s;
+}
+
+
+nav a:hover {
+
+    color: #d8587f;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 110px 20px 50px;
+}
+
+
+.content {
+
+    max-width: 800px;
+
+    animation: appear 1.5s ease;
+}
+
+
+.small-title {
+
+    color: #b85c78;
+
+    letter-spacing: 4px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+
+.big-heart {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+
+h1 {
+
+    font-family: cursive;
+
+    color: #d8587f;
+
+    font-size: clamp(55px, 11vw, 95px);
+
+    font-weight: normal;
+
+    line-height: 1.1;
+}
+
+
+.name {
+
+    font-family: cursive;
+
+    color: #9f4c6b;
+
+    font-size: clamp(38px, 7vw, 60px);
+
+    margin-top: 5px;
+}
+
+
+.date {
+
+    color: #9a6978;
+
+    font-size: 18px;
+
+    margin-top: 12px;
+}
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown-title {
+
+    color: #b85c78;
+
+    margin-top: 28px;
+
+    font-weight: bold;
+}
+
+
+.countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 12px;
+}
+
+
+.time-box {
+
+    min-width: 70px;
+
+    padding: 12px 8px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 20px rgba(120,50,80,.08);
+
+    border:
+        1px solid #f5dce5;
+}
+
+
+.time-box span {
+
+    display: block;
+
+    color: #d8587f;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+
+.time-box small {
+
+    color: #8c6975;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+
+    max-width: 650px;
+
+    margin: 25px auto;
+
+    color: #765966;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 15px 30px;
+
+    background: #d8587f;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 12px 30px rgba(216,88,127,.3);
+
+    transition: .3s;
+}
+
+
+.button:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    background: #c94d73;
+}
+
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+.music-button {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    z-index: 3000;
+
+    width: 60px;
+
+    height: 60px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #d8587f;
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(216,88,127,.35);
+
+    transition: .3s;
+}
+
+
+.music-button:hover {
+
+    transform: scale(1.1);
+}
+
+
+.music-button.playing {
+
+    animation:
+        musicPulse 1s infinite;
+}
+
+
+@keyframes musicPulse {
+
+    0%,100% {
+        box-shadow:
+            0 8px 25px rgba(216,88,127,.35);
+    }
+
+    50% {
+        box-shadow:
+            0 8px 35px rgba(216,88,127,.7);
+    }
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart {
+
+    position: fixed;
+
+    bottom: -30px;
+
+    z-index: 2000;
+
+    pointer-events: none;
+
+    animation:
+        floatHeart 6s linear forwards;
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes heartbeat {
+
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px) {
+
+    nav {
+
+        gap: 10px;
+
+        padding: 14px 5px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .message {
+        font-size: 15px;
+    }
+
+    .countdown {
+        gap: 6px;
+    }
+
+    .time-box {
+        min-width: 60px;
+    }
+
+    .time-box span {
+        font-size: 20px;
+    }
+
+    .music-button {
+
+        right: 15px;
+
+        bottom: 15px;
+
+        width: 54px;
+
+        height: 54px;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =================================
+     PASSWORD SCREEN
+================================= -->
+
+<div id="passwordScreen">
+
+    <div class="password-box">
+
+        <div class="lock">
+            🔐
+        </div>
+
+        <h1>
+            Hello Madamjii 💗
+        </h1>
+
+        <p>
+
+            This little world is only for you...
+
+            <br>
+
+            So tell me the secret password. 👀
+
+        </p>
+
+
+        <input
+            type="password"
+            id="password"
+            class="password-input"
+            placeholder="Enter password 💕"
+        >
+
+
+        <button
+            class="enter-button"
+            onclick="checkPassword()">
+
+            Open My Surprise 💌
+
+        </button>
+
+
+        <p
+            id="error"
+            class="error">
+
+            Hmm... that's not the secret password 😝💗
+
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================
+     MAIN WEBSITE
+================================= -->
+
+<div id="mainWebsite">
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="memories.html">
+            Memories
+        </a>
+
+        <a href="letter.html">
+            Letter
+        </a>
+
+        <a href="reasons.html">
+            Reasons
+        </a>
+
+        <a href="surprise.html">
+            Surprise
+        </a>
+
+    </nav>
+
+
+
+    <!-- HOME -->
+
+    <section class="home">
+
+        <div class="content">
+
+
+            <div class="big-heart">
+                💗
+            </div>
+
+
+            <p class="small-title">
+
+                A LITTLE SURPRISE
+                FOR SOMEONE SPECIAL
+
+            </p>
+
+
+            <h1>
+                Happy Birthday
+            </h1>
+
+
+            <div class="name">
+                Meri Madamjii 🌷
+            </div>
+
+
+            <p class="date">
+                25 August · Your Special Day 🎂
+            </p>
+
+
+
+            <!-- COUNTDOWN -->
+
+            <p class="countdown-title">
+
+                Counting down to your special day... ⏳
+
+            </p>
+
+
+            <div class="countdown">
+
+
+                <div class="time-box">
+
+                    <span id="days">00</span>
+
+                    <small>Days</small>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <span id="hours">00</span>
+
+                    <small>Hours</small>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <span id="minutes">00</span>
+
+                    <small>Minutes</small>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <span id="seconds">00</span>
+
+                    <small>Seconds</small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <p class="message">
+
+                Some people enter our lives randomly...
+
+                and somehow become one of
+                the most beautiful parts of our story.
+
+                <br><br>
+
+                This little website is a tiny collection
+                of memories, words and love
+                made especially for you. 🥹💕
+
+            </p>
+
+
+            <a
+                href="memories.html"
+                class="button">
+
+                Start Our Story 💌
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         MUSIC
+    ================================= -->
+
+    <audio
+        id="birthdayMusic"
+        loop
+        preload="auto">
+
+        <source
+            src="./birthday-song.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+
+    <button
+        class="music-button"
+        id="musicButton"
+        onclick="toggleMusic()">
+
+        🎵
+
+    </button>
+
+
+</div>
+
+
+
+<!-- =================================
+     JAVASCRIPT
+================================= -->
+
+<script>
+
+
+/* =========================
+   PASSWORD
+========================= */
+
+function checkPassword() {
+
+    const entered =
+        document
+        .getElementById("password")
+        .value
+        .trim()
+        .toLowerCase();
+
+
+    const correctPassword =
+        "madamjii";
+
+
+    if (entered === correctPassword) {
+
+        document
+        .getElementById("passwordScreen")
+        .style.display = "none";
+
+
+        document
+        .getElementById("mainWebsite")
+        .style.display = "block";
+
+
+        startHearts();
+
+
+        /*
+         IMPORTANT:
+         Music is NOT forced automatically.
+         Click the 🎵 button to start it.
+        */
+
+    }
+
+    else {
+
+        document
+        .getElementById("error")
+        .style.display = "block";
+
+    }
+
+}
+
+
+/* =========================
+   ENTER KEY
+========================= */
+
+document
+.getElementById("password")
+.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Enter") {
+
+            checkPassword();
+
+        }
+
+    }
+);
+
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+function updateCountdown() {
+
+    const now = new Date();
+
+    let year =
+        now.getFullYear();
+
+
+    let birthday =
+        new Date(
+            year,
+            7,
+            25,
+            0,
+            0,
+            0
+        );
+
+
+    if (now > birthday) {
+
+        birthday =
+            new Date(
+                year + 1,
+                7,
+                25,
+                0,
+                0,
+                0
+            );
+
+    }
+
+
+    const difference =
+        birthday - now;
+
+
+    const days =
+        Math.floor(
+            difference /
+            (1000 * 60 * 60 * 24)
+        );
+
+
+    const hours =
+        Math.floor(
+            (difference /
+            (1000 * 60 * 60))
+            % 24
+        );
+
+
+    const minutes =
+        Math.floor(
+            (difference /
+            (1000 * 60))
+            % 60
+        );
+
+
+    const seconds =
+        Math.floor(
+            (difference / 1000)
+            % 60
+        );
+
+
+    document
+    .getElementById("days")
+    .textContent =
+        String(days)
+        .padStart(2,"0");
+
+
+    document
+    .getElementById("hours")
+    .textContent =
+        String(hours)
+        .padStart(2,"0");
+
+
+    document
+    .getElementById("minutes")
+    .textContent =
+        String(minutes)
+        .padStart(2,"0");
+
+
+    document
+    .getElementById("seconds")
+    .textContent =
+        String(seconds)
+        .padStart(2,"0");
+
+}
+
+
+updateCountdown();
+
+
+setInterval(
+    updateCountdown,
+    1000
+);
+
+
+
+/* =========================
+   MUSIC
+========================= */
+
+let musicPlaying = false;
+
+
+function toggleMusic() {
+
+    const music =
+        document.getElementById(
+            "birthdayMusic"
+        );
+
+
+    const button =
+        document.getElementById(
+            "musicButton"
+        );
+
+
+    if (music.paused) {
+
+        music.play()
+        .then(function() {
+
+            musicPlaying = true;
+
+            button.textContent = "🔊";
+
+            button.classList.add(
+                "playing"
+            );
+
+        })
+        .catch(function(error) {
+
+            console.log(
+                "Music error:",
+                error
+            );
+
+            alert(
+                "Music play nahi ho raha. Check karo birthday-song.mp3 index.html ke same folder mein hai."
+            );
+
+        });
+
+    }
+
+    else {
+
+        music.pause();
+
+        musicPlaying = false;
+
+        button.textContent = "🎵";
+
+        button.classList.remove(
+            "playing"
+        );
+
+    }
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createHeart() {
+
+    const heart =
+        document.createElement("div");
+
+
+    heart.className =
+        "heart";
+
+
+    const emojis = [
+
+        "💗",
+        "💕",
+        "💖",
+        "🌸",
+        "✨",
+        "🎀"
+
+    ];
+
+
+    heart.innerHTML =
+        emojis[
+            Math.floor(
+                Math.random()
+                * emojis.length
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random()
+        * 100
+        + "vw";
+
+
+    heart.style.fontSize =
+        (
+            15 +
+            Math.random() * 22
+        )
+        + "px";
+
+
+    heart.style.animationDuration =
+        (
+            5 +
+            Math.random() * 4
+        )
+        + "s";
+
+
+    document.body.appendChild(
+        heart
+    );
+
+
+    setTimeout(
+        function() {
+
+            heart.remove();
+
+        },
+        9000
+    );
+
+}
+
+
+function startHearts() {
+
+    setInterval(
+        createHeart,
+        700
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>

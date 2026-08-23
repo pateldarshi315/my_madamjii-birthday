@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Why You're Special 💗</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: #593342;
+
+    background:
+        radial-gradient(circle at top left, #ffdce9, transparent 35%),
+        radial-gradient(circle at bottom right, #ffe5ef, transparent 35%),
+        #fff7fa;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+
+    padding: 18px;
+
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #f2d2de;
+}
+
+nav a {
+    text-decoration: none;
+    color: #a84f70;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d8587f;
+}
+
+
+/* MAIN */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+
+/* HEADING */
+
+.small-title {
+    color: #b85c78;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: cursive;
+    color: #d8587f;
+    font-size: clamp(45px, 8vw, 70px);
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    max-width: 650px;
+    margin: 0 auto 50px;
+
+    color: #80616e;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+
+/* REASON CARDS */
+
+.reasons {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.card {
+
+    background: white;
+
+    padding: 35px 25px;
+
+    border-radius: 25px;
+
+    border: 1px solid #f3dce4;
+
+    box-shadow:
+        0 15px 40px
+        rgba(120,50,80,0.10);
+
+    transition: 0.3s;
+}
+
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 50px
+        rgba(120,50,80,0.18);
+}
+
+
+.emoji {
+
+    font-size: 45px;
+
+    margin-bottom: 18px;
+}
+
+
+.card h2 {
+
+    color: #c45176;
+
+    font-family: cursive;
+
+    font-size: 27px;
+
+    font-weight: normal;
+
+    margin-bottom: 12px;
+}
+
+
+.card p {
+
+    color: #765966;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/* SPECIAL MESSAGE */
+
+.special {
+
+    max-width: 750px;
+
+    margin: 55px auto 0;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe6ef,
+            #ffffff
+        );
+
+    border-radius: 25px;
+
+    border: 1px solid #f3d5e0;
+
+    box-shadow:
+        0 10px 30px
+        rgba(120,50,80,0.08);
+}
+
+
+.special h2 {
+
+    font-family: cursive;
+
+    color: #d8587f;
+
+    font-size: 32px;
+
+    font-weight: normal;
+
+    margin-bottom: 12px;
+}
+
+
+.special p {
+
+    color: #765966;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+/* BUTTON */
+
+.button {
+
+    display: inline-block;
+
+    margin-top: 40px;
+
+    padding: 15px 30px;
+
+    background: #d8587f;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 10px 25px
+        rgba(216,88,127,0.3);
+
+    transition: 0.3s;
+}
+
+
+.button:hover {
+
+    transform: translateY(-4px);
+
+    background: #c94d73;
+}
+
+
+/* FLOATING HEARTS */
+
+.heart {
+
+    position: fixed;
+
+    bottom: -30px;
+
+    z-index: 2000;
+
+    pointer-events: none;
+
+    animation:
+        floatHeart 6s linear forwards;
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* MOBILE */
+
+@media(max-width: 750px) {
+
+    nav {
+        gap: 10px;
+        padding: 14px 5px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .reasons {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media(max-width: 500px) {
+
+    .reasons {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="memories.html">
+        Memories
+    </a>
+
+    <a href="letter.html">
+        Letter
+    </a>
+
+    <a href="reasons.html">
+        Reasons
+    </a>
+
+    <a href="surprise.html">
+        Surprise
+    </a>
+
+</nav>
+
+
+
+<!-- MAIN CONTENT -->
+
+<div class="container">
+
+
+    <p class="small-title">
+        JUST A FEW REASONS 🎀
+    </p>
+
+
+    <h1>
+        Why You're Special 💗
+    </h1>
+
+
+    <p class="subtitle">
+
+        There are probably a million reasons,
+        but let's start with a few...
+
+        because honestly, I could keep writing
+        forever. 🥹💕
+
+    </p>
+
+
+
+    <!-- CARDS -->
+
+    <div class="reasons">
+
+
+        <div class="card">
+
+            <div class="emoji">
+                🥹
+            </div>
+
+            <h2>
+                Your Smile
+            </h2>
+
+            <p>
+                Your smile has this magical way
+                of making even an ordinary day
+                feel a little brighter.
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="emoji">
+                🫶
+            </div>
+
+            <h2>
+                Your Care
+            </h2>
+
+            <p>
+                You have your own beautiful way
+                of caring for the people you love,
+                and that's something really special.
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="emoji">
+                😂
+            </div>
+
+            <h2>
+                Your Madness
+            </h2>
+
+            <p>
+                Our random talks, stupid jokes
+                and completely crazy moments
+                are some of my favourite memories.
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="emoji">
+                🌷
+            </div>
+
+            <h2>
+                Your Heart
+            </h2>
+
+            <p>
+                You have such a beautiful heart,
+                and that's one of the reasons
+                you're so special to me.
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="emoji">
+                📸
+            </div>
+
+            <h2>
+                Our Memories
+            </h2>
+
+            <p>
+                Every picture becomes more special
+                because you're somewhere in it.
+            </p>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="emoji">
+                ♾️
+            </div>
+
+            <h2>
+                Our Bond
+            </h2>
+
+            <p>
+                Some friendships simply feel like
+                home. And honestly,
+                ours feels exactly like that.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- SPECIAL MESSAGE -->
+
+    <div class="special">
+
+        <h2>
+            And the biggest reason... 💗
+        </h2>
+
+        <p>
+
+            Because you're simply YOU.
+
+            <br><br>
+
+            No special reason.
+            No perfect explanation.
+
+            <br><br>
+
+            Just you.
+
+            <br><br>
+
+            And somehow,
+            that's more than enough. 🥹🌷
+
+        </p>
+
+    </div>
+
+
+
+    <!-- NEXT BUTTON -->
+
+    <a href="surprise.html" class="button">
+
+        One Last Surprise → 🎁
+
+    </a>
+
+
+</div>
+
+
+
+<!-- HEART SCRIPT -->
+
+<script>
+
+function createHeart() {
+
+    const heart =
+        document.createElement("div");
+
+    heart.className = "heart";
+
+    const emojis = [
+        "💗",
+        "💕",
+        "💖",
+        "🌸",
+        "✨",
+        "🎀"
+    ];
+
+    heart.innerHTML =
+        emojis[
+            Math.floor(
+                Math.random() * emojis.length
+            )
+        ];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (15 + Math.random() * 20) + "px";
+
+    heart.style.animationDuration =
+        (4 + Math.random() * 4) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function() {
+        heart.remove();
+    }, 8000);
+
+}
+
+setInterval(createHeart, 700);
+
+</script>
+
+
+</body>
+
+</html>
